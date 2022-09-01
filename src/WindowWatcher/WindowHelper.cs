@@ -1,10 +1,17 @@
-﻿using System.Runtime.InteropServices;
-using System.Text;
-
 namespace WindowWatcher;
 
+using System.Runtime.InteropServices;
+using System.Text;
+
+/// <summary>
+/// Defines a helper class for interacting with the user32.dll windowing APIs.
+/// </summary>
 public static class WindowHelper
 {
+    /// <summary>
+    /// Gets the current foreground (active) window.
+    /// </summary>
+    /// <returns>The <see cref="Window"/> that represents the current foreground (active) window.</returns>
     public static Window? GetCurrentForegroundWindow()
     {
         var handle = GetForegroundWindow();
