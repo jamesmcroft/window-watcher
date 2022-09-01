@@ -1,9 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <OutputType>Library</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Product>Window Watcher</Product>
+    <Description>
+      Window Watcher is an SDK built on the user32.dll GetForegroundWindow API to provide a watcher for active window changes on Windows devices.
+      This is useful for applications that need to know the window that a user is interacting with.
+    </Description>
+    <PackageTags>Windows Window Watcher API SDK</PackageTags>
+    <RootNamespace>WindowWatcher</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

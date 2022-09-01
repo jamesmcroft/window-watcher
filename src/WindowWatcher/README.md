@@ -1,4 +1,4 @@
-# Window Watcher
+# Window Watcher SDK
 
 [![GitHub release](https://img.shields.io/github/release/jamesmcroft/window-watcher.svg)](https://github.com/jamesmcroft/window-watcher/releases)
 [![Build status](https://github.com/jamesmcroft/window-watcher/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/jamesmcroft/window-watcher/actions/workflows/ci.yml)
@@ -21,6 +21,33 @@ Or by adding the `WindowWatcher` package in your NuGet package manager of choice
 
 To use the SDK, [follow the Window Watcher SDK instructions](https://github.com/jamesmcroft/window-watcher/blob/main/src/WindowWatcher/README.md).
 
+### Using the `ForegroundWindowWatcher`
+
+The `ForegroundWindowWatcher` is a simple class that can be used to listen for changes in the current foreground (active) window on a Windows device providing a `Window` object with the window detail.
+
+```csharp
+using WindowWatcher;
+
+var windowWatcher = new ForegroundWindowWatcher();
+
+windowWatcher.WindowChanged += (sender, args) =>
+{
+    Console.WriteLine($"Window changed to {args.NewWindow?.Title}");
+};
+
+windowWatcher.Start();
+```
+
+**Note**, `ForegroundWindowWatcher` has an `IForegroundWindowWatcher` interface to ease the extensibility, testability, and support for dependency injection in your applications.
+
+### Getting the current foreground (active) window with the `WindowHelper`
+
+In addition to the watcher, the `WindowHelper` class has a `GetCurrentForegroundWindow` method that you can use to get a point-in-time reference to the current foreground (active) window.
+
+```csharp
+Window? currentWindow = WindowHelper.GetCurrentForegroundWindow();
+```
+
 ## Contributing 🤝🏻
 
 Contributions, issues and feature requests are welcome!
@@ -37,10 +64,10 @@ As many developers know, projects like this are built and maintained in maintain
 
 👤 **James Croft**
 
-* Website: <https://www.jamescroft.co.uk>
-* Twitter: [@jamesmcroft](https://twitter.com/jamesmcroft)
-* Github: [@jamesmcroft](https://github.com/jamesmcroft)
-* LinkedIn: [@jmcroft](https://linkedin.com/in/jmcroft)
+- Website: <https://www.jamescroft.co.uk>
+- Twitter: [@jamesmcroft](https://twitter.com/jamesmcroft)
+- Github: [@jamesmcroft](https://github.com/jamesmcroft)
+- LinkedIn: [@jmcroft](https://linkedin.com/in/jmcroft)
 
 ## License
 

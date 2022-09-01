@@ -1,25 +1,11 @@
-# Window Watcher
+# Window Watcher Console Sample
 
 [![GitHub release](https://img.shields.io/github/release/jamesmcroft/window-watcher.svg)](https://github.com/jamesmcroft/window-watcher/releases)
 [![Build status](https://github.com/jamesmcroft/window-watcher/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/jamesmcroft/window-watcher/actions/workflows/ci.yml)
 [![Twitter Followers](https://img.shields.io/twitter/follow/jamesmcroft?label=follow%20%40jamesmcroft&style=flat)](https://twitter.com/jamesmcroft)
 [![SDK](https://img.shields.io/nuget/v/WindowWatcher?label=sdk)](https://www.nuget.org/packages/WindowWatcher/)
 
-The Window Watcher SDK allows you to listen for changes to the current foreground (active) window on Windows devices. The SDK takes advantage of the `user32.dll` windowing APIs to get information about the current foreground (active) window on a device using P/Invoke.
-
-## Getting started
-
-### Get the SDK
-
-If you want to build your own applications on the Window Watcher SDK, you can install the package into your dotnet application.
-
-```bash
-dotnet add package WindowWatcher
-```
-
-Or by adding the `WindowWatcher` package in your NuGet package manager of choice.
-
-To use the SDK, [follow the Window Watcher SDK instructions](https://github.com/jamesmcroft/window-watcher/blob/main/src/WindowWatcher/README.md).
+The Window Watcher Console sample project is a simple showcase of the usage of the Window Watcher SDK.
 
 ## Contributing 🤝🏻
 
@@ -37,10 +23,10 @@ As many developers know, projects like this are built and maintained in maintain
 
 👤 **James Croft**
 
-* Website: <https://www.jamescroft.co.uk>
-* Twitter: [@jamesmcroft](https://twitter.com/jamesmcroft)
-* Github: [@jamesmcroft](https://github.com/jamesmcroft)
-* LinkedIn: [@jmcroft](https://linkedin.com/in/jmcroft)
+- Website: <https://www.jamescroft.co.uk>
+- Twitter: [@jamesmcroft](https://twitter.com/jamesmcroft)
+- Github: [@jamesmcroft](https://github.com/jamesmcroft)
+- LinkedIn: [@jmcroft](https://linkedin.com/in/jmcroft)
 
 ## License
 
