@@ -19,8 +19,6 @@ dotnet add package WindowWatcher
 
 Or by adding the `WindowWatcher` package in your NuGet package manager of choice.
 
-To use the SDK, [follow the Window Watcher SDK instructions](https://github.com/jamesmcroft/window-watcher/blob/main/src/WindowWatcher/README.md).
-
 ### Using the `ForegroundWindowWatcher`
 
 The `ForegroundWindowWatcher` is a simple class that can be used to listen for changes in the current foreground (active) window on a Windows device providing a `Window` object with the window detail.

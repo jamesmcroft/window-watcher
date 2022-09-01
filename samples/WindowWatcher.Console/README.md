@@ -7,6 +7,20 @@
 
 The Window Watcher Console sample project is a simple showcase of the usage of the Window Watcher SDK.
 
+## Getting started
+
+### Get the SDK
+
+If you want to build your own applications on the Window Watcher SDK, you can install the package into your dotnet application.
+
+```bash
+dotnet add package WindowWatcher
+```
+
+Or by adding the `WindowWatcher` package in your NuGet package manager of choice.
+
+To use the SDK, [follow the Window Watcher SDK instructions](https://github.com/jamesmcroft/window-watcher/blob/main/src/WindowWatcher/README.md).
+
 ## Contributing 🤝🏻
 
 Contributions, issues and feature requests are welcome!
