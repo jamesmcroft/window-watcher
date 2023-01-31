@@ -3,7 +3,7 @@
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <OutputType>Library</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Product>Window Watcher</Product>
@@ -14,9 +14,5 @@
     <PackageTags>Windows Window Watcher API SDK</PackageTags>
     <RootNamespace>WindowWatcher</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MADE.Threading" Version="1.6.0" />
-  </ItemGroup>
 
 </Project>
