@@ -1,7 +1,5 @@
 namespace WindowWatcher;
 
-using MADE.Threading;
-
 /// <summary>
 /// Defines a watcher for the state of the current foreground (active) window and raises events when it changes.
 /// </summary>
