@@ -57,12 +57,12 @@ jobs:
       shell: pwsh
 
     - name: Setup .NET 8.0
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: 8.0.x
 
     - name: Setup .NET 10.0
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: 10.0.x
 
@@ -120,12 +120,12 @@ jobs:
       shell: pwsh
 
     - name: Setup .NET 8.0
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: 8.0.x
 
     - name: Setup .NET 10.0
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: 10.0.x
 
