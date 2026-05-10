@@ -144,8 +144,7 @@ jobs:
         --output ./nupkg
 
     - name: Publish to NuGet.org
-      run: >
-        dotnet nuget push ./nupkg/*.nupkg
-        --source 'https://api.nuget.org/v3/index.json'
-        --api-key ${{ secrets.NUGET_API_KEY }}
-        --skip-duplicate
+      run: |
+        Get-ChildItem ./nupkg -Filter *.nupkg | ForEach-Object {
+          dotnet nuget push $_.FullName --source 'https://api.nuget.org/v3/index.json' --api-key '${{ secrets.NUGET_API_KEY }}' --skip-duplicate
+        }
