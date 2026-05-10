@@ -12,13 +12,13 @@ updates:
   groups:
     testing:
       patterns:
-      - "coverlet*"
-      - "Microsoft.NET.Test*"
-      - "xunit*"
+        - "coverlet*"
+        - "Microsoft.NET.Test*"
+        - "xunit*"
     analyzers:
       patterns:
-      - "StyleCop*"
-      - "Microsoft.SourceLink*"
+        - "StyleCop*"
+        - "Microsoft.SourceLink*"
 
 - package-ecosystem: github-actions
   directory: "/"
