@@ -1,12 +1,11 @@
 namespace WindowWatcher;
 
 using System.Runtime.InteropServices;
-using System.Text;
 
 /// <summary>
 /// Defines a helper class for interacting with the user32.dll windowing APIs.
 /// </summary>
-public static class WindowHelper
+public static partial class WindowHelper
 {
     /// <summary>
     /// Gets the current foreground (active) window.
@@ -17,17 +16,18 @@ public static class WindowHelper
         var handle = GetForegroundWindow();
 
         var bufferSize = GetWindowTextLength(handle) + 1;
-        var buffer = new StringBuilder(bufferSize);
+        var buffer = new char[bufferSize];
 
-        return GetWindowText(handle, buffer, bufferSize) > 0 ? new Window(handle, buffer.ToString()) : null;
+        var length = GetWindowText(handle, buffer, bufferSize);
+        return length > 0 ? new Window(handle, new string(buffer, 0, length)) : null;
     }
 
-    [DllImport("user32.dll")]
-    private static extern IntPtr GetForegroundWindow();
+    [LibraryImport("user32.dll")]
+    private static partial IntPtr GetForegroundWindow();
 
-    [DllImport("user32.dll")]
-    private static extern int GetWindowTextLength(IntPtr hWnd);
+    [LibraryImport("user32.dll", EntryPoint = "GetWindowTextLengthW")]
+    private static partial int GetWindowTextLength(IntPtr hWnd);
 
-    [DllImport("user32.dll")]
-    private static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);
+    [LibraryImport("user32.dll", EntryPoint = "GetWindowTextW", StringMarshalling = StringMarshalling.Utf16)]
+    private static partial int GetWindowText(IntPtr hWnd, [Out] char[] lpString, int nMaxCount);
 }
