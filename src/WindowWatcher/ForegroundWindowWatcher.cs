@@ -87,6 +87,7 @@ public class ForegroundWindowWatcher : IForegroundWindowWatcher, IDisposable
             return;
         }
 
+        this.Stop();
         this.timer.Tick -= this.OnTimerTick;
         this.timer.Dispose();
         this.WindowChanged = null;
